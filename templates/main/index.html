@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+</head>
+<body>
+  {% block contents %}
+    {% draw_menu 'Orchestra' %}
+    {% draw_menu 'Movie Catalog' %}
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div style="margin-left: 5px">{{ menu_title.title }}
+  <div style="margin-left: 5px">
+    <ul>
+      {% if opened_menu %}
+        {% for i in opened_menu %}
+          <li>
+            {% autoescape off %}
+              {{ i.prefix }}
+            {% endautoescape %}
+            <a href="{{ i.url }}">
+              {{ i.items__title }}
+            </a>
+          </li>
+        {% endfor %}
+      {% endif %}
+      {% for i in menu %}
+        <li>
+          {% autoescape off %}
+            {{ i.items__html_prefix }}
+          {% endautoescape %}
+          <a href="{{ i.items__url }} ">
+            {{ i.items__title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
